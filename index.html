@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pen</title>
 </head>
@@ -11,11 +11,15 @@
 <body>
     <div id="world-img" style="--uib-world-fill: green;">
         <p>This is blue by default, can't override using CSS variables unless the SVG is imported using JavaScript.</p>
-        <img src="./blue-world.svg" alt="Blue World Image" style="width:30%;">
+        <img src="./blue-world.svg" alt="Blue World Image" style="width:10%;">
     </div>
     <div id="world2-img">
         <p>This is blue by default. Try to override by importing style sheet into the SVG.</p>
-        <img src="./blue-world-import.svg" alt="Blue World Image" style="width:30%;">
+        <img src="./blue-world-import.svg" alt="Blue World Image" style="width:10%;">
+    </div>
+    <div id="world3-img">
+        <p>This is blue by default. Try to override by using currentColor.</p>
+        <span style="color:indianred;"><img src="./blue-world-import.svg" alt="Blue World Image" style="width:10%;"></span>
     </div>
     <div id="star-no-var-img"  style="fill: red !important;">
         <p>This is a star without CSS variables. Fill is not overridden.</p>
@@ -27,7 +31,7 @@
     </div>
     <div id="star-current">
         <p>This is a star using currentColor.</p>
-        <img style="color: purple;" src="./star-current.svg" alt="Star Current Colour Image">
+        <span style="color:indianred;"><img style="color: purple;" src="./star-current.svg" alt="Star Current Colour Image"></span>
     </div>
 
     <!-- <script src="./script.js"></script> -->
