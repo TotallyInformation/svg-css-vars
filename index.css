@@ -6,3 +6,12 @@
 img, #world0-img, #world0a-img {
     width: 2rem;
 }
+
+#eg-mask {
+    width: 2rem;
+    background-color: currentColor;
+    mask-image: url(star-novar.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
