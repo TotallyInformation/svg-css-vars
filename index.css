@@ -9,8 +9,9 @@ img, #world0-img, #world0a-img {
 
 #eg-mask {
     width: 2rem;
-    background-color: currentColor;
-    mask-image: url(star-novar.svg);
+    height: 2rem; /* Have to set this for some unknown reason */
+    background-color: var(--uib-world-fill, red);
+    mask-image: url(blue-world.svg);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
