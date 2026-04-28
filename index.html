@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+</head>
+
+<body>
+    <div id="world-img">
+        <p>This is blue by default, set to green using CSS variables.</p>
+        <img src="./blue-world.svg" style="--uib-world-fill: green;" alt="Blue World Image">
+    </div>
+    <div id="star-no-var-img">
+        <p>This is a star without CSS variables.</p>
+        <img src="./star-novar.svg" style="fill: red;" alt="Star No Var Image">
+    </div>
+    <div id="star-var-img">
+        <p>This is a star with CSS variables.</p>
+        <img src="./star-var.svg" style="--star-fill: purple;" alt="Star Var Image">
+    </div>
+
+    <!-- <script src="./script.js"></script> -->
+</body>
+
+</html>
