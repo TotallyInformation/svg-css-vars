@@ -1,4 +1,4 @@
-#svgImg {
+:root {
   --uib-world-fill: green;
-  width: 50%;
+  --star-fill: pink;
 }

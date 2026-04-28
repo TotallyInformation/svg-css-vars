@@ -10,16 +10,24 @@
 
 <body>
     <div id="world-img" style="--uib-world-fill: green;">
-        <p>This is blue by default, set to green using CSS variables.</p>
+        <p>This is blue by default, can't override using CSS variables unless the SVG is imported using JavaScript.</p>
         <img src="./blue-world.svg" alt="Blue World Image" style="width:30%;">
     </div>
+    <div id="world2-img">
+        <p>This is blue by default. Try to override by importing style sheet into the SVG.</p>
+        <img src="./blue-world-import.svg" alt="Blue World Image" style="width:30%;">
+    </div>
     <div id="star-no-var-img"  style="fill: red !important;">
-        <p>This is a star without CSS variables.</p>
+        <p>This is a star without CSS variables. Fill is not overridden.</p>
         <img src="./star-novar.svg" alt="Star No Var Image">
     </div>
     <div id="star-var-img" style="--star-fill: purple;">
-        <p>This is a star with CSS variables.</p>
+        <p>This is a star with CSS variables. Also not overridden unless fetched and injected using JavaScript.</p>
         <img src="./star-var.svg" alt="Star Var Image">
+    </div>
+    <div id="star-current">
+        <p>This is a star using currentColor.</p>
+        <img style="color: purple;" src="./star-current.svg" alt="Star Current Colour Image">
     </div>
 
     <!-- <script src="./script.js"></script> -->
