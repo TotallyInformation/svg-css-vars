@@ -9,17 +9,17 @@
 </head>
 
 <body>
-    <div id="world-img">
+    <div id="world-img" style="--uib-world-fill: green;">
         <p>This is blue by default, set to green using CSS variables.</p>
-        <img src="./blue-world.svg" style="--uib-world-fill: green;" alt="Blue World Image">
+        <img src="./blue-world.svg" alt="Blue World Image" style="width:30%;">
     </div>
-    <div id="star-no-var-img">
+    <div id="star-no-var-img"  style="fill: red !important;">
         <p>This is a star without CSS variables.</p>
-        <img src="./star-novar.svg" style="fill: red;" alt="Star No Var Image">
+        <img src="./star-novar.svg" alt="Star No Var Image">
     </div>
-    <div id="star-var-img">
+    <div id="star-var-img" style="--star-fill: purple;">
         <p>This is a star with CSS variables.</p>
-        <img src="./star-var.svg" style="--star-fill: purple;" alt="Star Var Image">
+        <img src="./star-var.svg" alt="Star Var Image">
     </div>
 
     <!-- <script src="./script.js"></script> -->
