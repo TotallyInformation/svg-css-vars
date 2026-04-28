@@ -24,17 +24,26 @@
         <div id="world0-img" style="--uib-world-fill: green;"></div>
         <div id="world0a-img" style="--uib-world-fill: purple;"></div>
     </div>
+    <div style="--uib-world-fill: green;">
+        <p>
+            This uses an in-line SVG to import the external SVG. The CSS variables work because the in-line SVG is part of the same document context as the CSS variables.
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <use href="./blue-world.svg" />
+        </svg>
+    </div>
     <div id="world-img" style="--uib-world-fill: green;">
-        <p>This is blue by default, can't override using CSS variables unless the SVG is imported using JavaScript.</p>
-        <img src="./blue-world.svg" alt="Blue World Image" style="width:10%;">
+        <p>This is blue by default, can't override using CSS variables because img creates a separate document context.</p>
+        <img src="./blue-world.svg">
     </div>
     <div id="world2-img">
         <p>This is blue by default. Try to override by importing style sheet into the SVG.</p>
-        <img src="./blue-world-import.svg" alt="Blue World Image" style="width:10%;">
+        <img src="./blue-world-import.svg">
     </div>
     <div id="world3-img">
-        <p>Try to use currentColor.</p>
-        <span style="color:indianred;fill: hotpink;"><img src="./blue-world-current.svg" alt="Blue World Image" style="width:10%;"></span>
+        <p>Try to use currentColor - only works with a data uri (2nd image).</p>
+        <div style="color:indianred;fill: hotpink;"><img src="./blue-world-current.svg"></div>
+        <div id="world3a-img" style="color:indianred;fill: hotpink;"></div>
     </div>
     <div id="star-no-var-img"  style="fill: red !important;">
         <p>This is a star without CSS variables. Fill is not overridden.</p>
