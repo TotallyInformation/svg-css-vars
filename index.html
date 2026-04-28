@@ -16,8 +16,12 @@
         This is because the <code>&lt;img&gt;</code> tag creates a separate document context for the SVG, and the CSS variables defined in the parent document won't be accessible to the SVG.
     </P>
     <div>
-        <p>This image is imported using JavaScript fetch and then injected into the DOM.</p>
+        <p>
+            These images are imported using JavaScript fetch and then injected into the DOM.
+            The CSS overrides work because the SVG is part of the same document context as the CSS variables.
+        </p>
         <div id="world0-img" style="--uib-world-fill: green;"></div>
+        <div id="world0a-img" style="--uib-world-fill: purple;"></div>
     </div>
     <div id="world-img" style="--uib-world-fill: green;">
         <p>This is blue by default, can't override using CSS variables unless the SVG is imported using JavaScript.</p>
@@ -29,7 +33,7 @@
     </div>
     <div id="world3-img">
         <p>This is blue by default. Try to override by using currentColor.</p>
-        <span style="color:indianred;"><img src="./blue-world-import.svg" alt="Blue World Image" style="width:10%;"></span>
+        <span style="color:indianred;"><img src="./blue-world-current.svg" alt="Blue World Image" style="width:10%;"></span>
     </div>
     <div id="star-no-var-img"  style="fill: red !important;">
         <p>This is a star without CSS variables. Fill is not overridden.</p>
