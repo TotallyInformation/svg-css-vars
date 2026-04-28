@@ -3,6 +3,6 @@
   --star-fill: pink;
 }
 
-#world0-img {
+img, #world0-img, #world0a-img {
     width: 2rem;
 }

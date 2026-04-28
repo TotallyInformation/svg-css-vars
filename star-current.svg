@@ -6,6 +6,6 @@
             fill="currentColor" />
     </mask>
     <g mask="url(#mask0_4297_23167)">
-        <rect width="32" height="32" fill="black" />
+        <rect width="32" height="32" fill="currentColor" />
     </g>
 </svg>
