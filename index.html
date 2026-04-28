@@ -4,11 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./index.css">
+    <script src="./script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pen</title>
 </head>
 
 <body>
+    <P>
+        I made an assumption about how to override SVG styles using CSS variables, but it turns out that it only works if the SVG is imported using JavaScript or embedded directly in the HTML.
+        If the SVG is imported using an <code>&lt;img&gt;</code> tag, the CSS variables won't work.
+        This is because the <code>&lt;img&gt;</code> tag creates a separate document context for the SVG, and the CSS variables defined in the parent document won't be accessible to the SVG.
+    </P>
+    <div>
+        <p>This image is imported using JavaScript fetch and then injected into the DOM.</p>
+        <div id="world0-img" style="--uib-world-fill: green;"></div>
+    </div>
     <div id="world-img" style="--uib-world-fill: green;">
         <p>This is blue by default, can't override using CSS variables unless the SVG is imported using JavaScript.</p>
         <img src="./blue-world.svg" alt="Blue World Image" style="width:10%;">
